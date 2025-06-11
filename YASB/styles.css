@@ -1,0 +1,298 @@
+/* --- Root Variables (Colors) --- */
+:root {
+    /* --- Mica Inspired Color Variables --- */
+    --background-color: rgba(79, 79, 79, 0.292);
+    --foreground-color: rgb(237, 238, 240);
+    --accent-color: #0078d4;
+    --border-color: rgb(53, 59, 69);
+    --icon-color: rgb(169, 174, 184);
+    --icon-hover: rgba(169, 174, 184, 0.8);
+    --hover-color: rgba(93, 114, 135, 0.12);
+    --highlight-color: rgba(89, 89, 89, 0.286);
+    --active-color: rgb(93, 114, 135);
+    --inactive-color: rgba(93, 114, 135, 0.5);
+}
+
+/* --- Base Styles --- */
+* {
+    font-size: 12px;
+    color: var(--foreground-color);
+    font-weight: 600;
+    font-family: "Segoe UI", "JetBrainsMono NFP";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Yasb Bar Itself --- */
+.yasb-bar {
+    background-color: var(--background-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    padding: 0 6px;
+}
+
+/* --- Individual Widgets --- */
+.widget {
+    padding: 0 12px;
+    margin: 0;
+}
+
+.container-right .widget .icon:hover {
+    color: var(--icon-hover);
+}
+
+/* --- Icons --- */
+.icon {
+    font-size: 14px;
+    color: var(--icon-color);
+}
+
+/* --- Widget Labels --- */
+.widget .label {
+    padding: 0px 2px;
+}
+
+/* --- Apps Widget Specific --- */
+.apps-widget {
+    padding: 0 4p 0 2px;
+}
+
+.apps-widget .widget-container .label {
+    font-size: 12px;
+}
+
+/* --- Komorebi Active Layout --- */
+.komorebi-active-layout {
+    padding: 0 4px;
+}
+
+.komorebi-active-layout .label {
+    font-weight: 600;
+    padding-bottom: 2px;
+}
+
+/* --- Workspace and Layout Containers --- */
+.apps-widget .widget-container,
+.komorebi-workspaces .widget-container,
+.komorebi-active-layout .widget-container,
+.glazewm-workspaces .widget-container,
+.glazewm-tiling-direction .widget-container {
+    background-color: var(--highlight-color);
+    border-radius: 12px;
+    margin: 4px 0;
+    border: 1px solid var(--border-color);
+}
+
+/* --- Komorebi & GlazeWM Workspaces --- */
+.komorebi-workspaces,
+.glazewm-workspaces {
+    padding: 0;
+}
+
+.komorebi-workspaces .offline-status,
+.glazewm-workspaces .offline-status {
+    color: var(--foreground-color);
+    font-size: 12px;
+    padding: 0 4px;
+    font-weight: 600;
+}
+
+.glazewm-workspaces .widget-container {
+    padding: 0 30px;
+}
+
+.komorebi-workspaces .ws-btn,
+.glazewm-workspaces .ws-btn {
+    color: transparent;
+    width: 10px;
+    height: 10px;
+    background-color: var(--active-color);
+    border-radius: 5px;
+    margin: 0 2px;
+    font-size: 1px;
+}
+
+.komorebi-workspaces .ws-btn:hover,
+.glazewm-workspaces .ws-btn:hover {
+    color: var(--accent-color);
+    background-color: var(--hover-color);
+}
+
+.komorebi-workspaces .ws-btn.populated,
+.glazewm-workspaces .ws-btn.populated {
+    width: 10px;
+    height: 10px;
+    background-color: var(--active-color);
+    border-radius: 5px;
+    margin: 0 2px;
+    font-size: 1px;
+}
+
+.komorebi-workspaces .ws-btn.active,
+.glazewm-workspaces .ws-btn.active {
+    color: transparent;
+    background-color: var(--icon-color);
+    width: 36px;
+    height: 10px;
+    border-radius: 5px;
+}
+
+/* --- Glazewm Tiling Direction --- */
+.glazewm-tiling-direction {
+    background-color: transparent;
+    padding: 0;
+    margin: 4px 0;
+}
+
+.glazewm-tiling-direction .btn {
+    font-size: 14px;
+    width: 14px;
+    padding: 0 4px 0 12px;
+    color: var(--foreground-color);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2px;
+}
+
+.glazewm-tiling-direction .btn:hover {
+    background-color: var(--hover-color);
+}
+
+/* --- Common Widget Padding --- */
+.weather-widget,
+.battery-widget,
+.wifi-widget,
+.volume-widget,
+.brightness-widget,
+.notification-widget {
+    padding: 0 6px;
+}
+
+/* --- Apps Widget Label --- */
+.apps-widget .label {
+    font-size: 14px;
+    padding: 0 2px;
+    color: var(--foreground-color);
+}
+
+/* --- Volume Widget --- */
+.volume-widget .icon {
+    color: var(--foreground-color);
+    margin: 1px 2px 0 0;
+}
+
+.volume-slider {
+    border: none;
+}
+
+.audio-menu {
+    background-color: var(--background-color);
+}
+
+.audio-container .device {
+    background-color: transparent;
+    border: none;
+    padding: 6px 8px 6px 4px;
+    margin: 2px 0;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.audio-container .device.selected {
+    background-color: var(--highlight-color);
+}
+
+.audio-container .device:hover {
+    background-color: var(--hover-color);
+}
+
+/* --- Battery Widget --- */
+.battery-widget .icon {
+    margin-right: 6px;
+    color: var(--foreground-color);
+}
+
+/* --- Brightness Widget --- */
+.brightness-widget .icon {
+    color: var(--foreground-color);
+}
+
+/* --- Weather Widget --- */
+.weather-widget .icon {
+    font-size: 18px;
+    margin: 0 2px 1px 0;
+}
+
+/* --- Wallpapers Widget --- */
+.wallpapers-widget .icon {
+    color: var(--foreground-color);
+    font-size: 14px;
+    margin: 0;
+}
+
+/* --- Systray --- */
+.systray {
+    border: none;
+    margin-right: -12px;
+    display: flex;
+    align-items: center;
+}
+
+.systray .unpinned-container {
+    border-radius: 8px;
+    padding: 2px;
+}
+
+.systray .pinned-container {
+    background: transparent;
+    padding: 2px;
+}
+
+.systray .button {
+    margin: 0 2px;
+    color: var(--foreground-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+.systray .button:hover {
+    background: var(--hover-color);
+}
+
+.systray .unpinned-visibility-btn {
+    border-radius: 4px;
+    font-size: 25px;
+    margin: 0 4px;
+}
+
+/* --- Home --- */
+.home-widget .icon {
+    color: #b4befe;
+}
+
+.home-widget .icon:hover {
+    color: #cdd6f4;
+}
+
+.home-menu {
+    background-color: var(--background-color);
+}
+
+.home-menu .menu-item {
+    padding: 6px 48px 7px 16px;
+    font-size: 12px;
+}
+
+.home-menu .menu-item:hover {
+    background-color: var(--hover-color);
+}
+
+.home-menu .separator {
+    max-height: 1px;
+    background-color: var(--border-color);
+}
